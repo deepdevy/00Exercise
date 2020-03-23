@@ -157,6 +157,21 @@ public class MemberManager {
 	
 	public void deleteOne() {
 		
+		System.out.println("탈퇴할 회원의 아이디를 입력하세요 : ");
+		String id = sc.next();
+		
+		for(int i = 0; i < m.length; i++) {
+			if(m[i].getUserId().equals(id)) {
+				m[i] = m[i++];
+				count -= 1;
+			} else {
+				System.out.println("삭제할 회원 정보가 존재하지 않습니다.");
+			}
+		}
+	}
+	
+	public void deleteAll() {
+		
 	}
 	
 	
