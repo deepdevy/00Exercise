@@ -75,7 +75,7 @@ public class MemberManager {
 		
 		for(int i = 0; i < m.length; i++) {
 			
-			if(m[i].getUserName().equals(eml)) {
+			if(m[i].getEmail().equals(eml)) {
 				System.out.println(m[i]);
 				return;
 			} else {
@@ -93,7 +93,7 @@ public class MemberManager {
 		
 		for(int i = 0; i < m.length; i++) {
 			
-			if(m[i].getUserName().equals(id)) {
+			if(m[i].getUserId().equals(id)) {
 				
 				System.out.println("변경할 비밀번호를 입력하세요 : ");
 				String npwd = sc.next();
@@ -106,6 +106,35 @@ public class MemberManager {
 				new MemberMenu().mainMenu();
 			}
 		}
+		
+	}
+	
+	public void updateName() {
+		
+		System.out.println("수정할 회원의 아이디를 입력하세요 : ");
+		String id = sc.next();
+		
+		for(int i = 0; i < m.length; i++) {
+			
+			if(m[i].getUserName().equals(id)) {
+				
+				System.out.println("변경할 이름을 입력하세요 : ");
+				String name = sc.next();
+				m[i].setUserName(name);
+				System.out.println("이름 수정이 완료되었습니다.");
+				return;
+				
+			} else {
+				System.out.println("수정할 회원이 존재하지 않습니다."); 
+				new MemberMenu().mainMenu();
+			}
+		}
+		
+	}
+	
+	public void updateEmail() {
+		
+		
 		
 	}
 	
