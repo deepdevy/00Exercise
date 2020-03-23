@@ -86,6 +86,29 @@ public class MemberManager {
 		
 	}
 	
+	public void updatePwd() {
+		
+		System.out.println("수정할 회원의 아이디를 입력하세요 : ");
+		String id = sc.next();
+		
+		for(int i = 0; i < m.length; i++) {
+			
+			if(m[i].getUserName().equals(id)) {
+				
+				System.out.println("변경할 비밀번호를 입력하세요 : ");
+				String npwd = sc.next();
+				m[i].setUserPwd(npwd);
+				System.out.println("패스워드 수정이 완료되었습니다.");
+				return;
+				
+			} else {
+				System.out.println("수정할 회원이 존재하지 않습니다."); 
+				new MemberMenu().mainMenu();
+			}
+		}
+		
+	}
+	
 	
 	
 	
