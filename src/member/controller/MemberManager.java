@@ -116,7 +116,7 @@ public class MemberManager {
 		
 		for(int i = 0; i < m.length; i++) {
 			
-			if(m[i].getUserName().equals(id)) {
+			if(m[i].getUserId().equals(id)) {
 				
 				System.out.println("변경할 이름을 입력하세요 : ");
 				String name = sc.next();
@@ -134,7 +134,28 @@ public class MemberManager {
 	
 	public void updateEmail() {
 		
+		System.out.println("수정할 회원의 아이디를 입력하세요 : ");
+		String id = sc.next();
 		
+		for(int i = 0; i < m.length; i++) {
+			
+			if(m[i].getUserId().equals(id)) {
+				
+				System.out.println("변경할 이메일을 입력하세요 : ");
+				String eml = sc.next();
+				m[i].setUserName(eml);
+				System.out.println("이메일 수정이 완료되었습니다.");
+				return;
+				
+			} else {
+				System.out.println("수정할 회원이 존재하지 않습니다."); 
+				new MemberMenu().mainMenu();
+			}
+		}
+		
+	}
+	
+	public void deleteOne() {
 		
 	}
 	
