@@ -187,6 +187,16 @@ public class MemberManager {
 	
 	public void printAllMember() {
 		
+		for(int i = 0; i < m.length; i++) {
+			System.out.println("아이디 : " + m[i].getUserId());
+			System.out.println("비밀번호 : " + m[i].getUserPwd());
+			System.out.println("이름 : " + m[i].getUserName());
+			System.out.println("나이 : " + m[i].getAge());
+			System.out.println("성별 : " + m[i].getGender());
+			System.out.println("이메일 : " + m[i].getEmail());
+			System.out.println();
+		}
+		
 	}
 	
 	
