@@ -172,6 +172,21 @@ public class MemberManager {
 	
 	public void deleteAll() {
 		
+		for(int i = 0; i < m.length; i++) {
+			m[i].setAge(0);
+			m[i].setEmail("");
+			m[i].setGender(' ');
+			m[i].setUserId("");
+			m[i].setUserName("");
+			m[i].setUserPwd("");
+			count = 0;
+			
+		}
+		
+	}
+	
+	public void printAllMember() {
+		
 	}
 	
 	
