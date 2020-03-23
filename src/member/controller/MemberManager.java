@@ -52,6 +52,42 @@ public class MemberManager {
 		}
 	}
 	
+	public void searchName() {
+		System.out.println("검색할 이름을 입력하세요 : ");
+		String name = sc.next();
+		
+		for(int i = 0; i < m.length; i++) {
+			
+			if(m[i].getUserName().equals(name)) {
+				System.out.println(m[i]);
+				return;
+			} else {
+				System.out.println("검색한 회원 정보가 존재하지 않습니다."); 
+				new MemberMenu().mainMenu();
+			}
+		}
+	}
+	
+	public void searchEmail() {
+		
+		System.out.println("검색할 이메일을 입력하세요 : ");
+		String eml = sc.next();
+		
+		for(int i = 0; i < m.length; i++) {
+			
+			if(m[i].getUserName().equals(eml)) {
+				System.out.println(m[i]);
+				return;
+			} else {
+				System.out.println("검색한 회원 정보가 존재하지 않습니다."); 
+				new MemberMenu().mainMenu();
+			}
+		}
+		
+	}
+	
+	
+	
 	
 	
 	
