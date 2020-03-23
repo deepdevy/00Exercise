@@ -28,14 +28,31 @@ public class MemberManager {
 		System.out.println("이메일 입력 : ");
 		String eml = sc.next();
 		
-		Member[] m = {
-				new Member(id, pwd, name, age, gen, eml),
-		};
+		m[count] = new Member(id, pwd, name, age, gen, eml);
 		count++;
 		
 		System.out.println("입력이 완료되었습니다. 메인 메뉴로 돌아갑니다.");
 		new MemberMenu().mainMenu();
 	}
+	
+	public void searchId() {
+		
+		System.out.println("검색할 아이디를 입력하세요 : ");
+		String id = sc.next();
+		
+		for(int i = 0; i < m.length; i++) {
+			
+			if(m[i].getUserId().equals(id)) {
+				System.out.println(m[i]);
+				return;
+			} else {
+				System.out.println("검색한 회원 정보가 존재하지 않습니다."); 
+				new MemberMenu().mainMenu();
+			}
+		}
+	}
+	
+	
 	
 	
 }
