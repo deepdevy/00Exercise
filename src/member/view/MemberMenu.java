@@ -23,18 +23,20 @@ public class MemberMenu {
 			System.out.println("5. 회원 정보 출력");
 			System.out.println("9. 종료");
 			System.out.println("=================================");
-			System.out.println("메뉴 번호를 입력하세요 : ");
+			System.out.print("메뉴 번호를 입력하세요 : ");
 			int num = sc.nextInt();
 			
 			switch(num) {
-			case 1 : mm.insertMember();
-			case 2 : searchMemberMenu();
-			case 3 : updateMemberMenu();
-			case 4 : deleteMemberMenu();
-			case 5 : mm.printAllMember();
+			case 1 : mm.insertMember(); break;
+			case 2 : searchMemberMenu(); break;
+			case 3 : updateMemberMenu(); break;
+			case 4 : deleteMemberMenu(); break;
+			case 5 : mm.printAllMember(); break;
 			case 9 : System.out.println("프로그램을 종료합니다."); return;
 			default : System.out.println("번호를 잘못 입력하셨습니다. 다시 선택해주세요."); break;
 			}
+			
+			
 		}while(true);
 	}
 	
@@ -48,14 +50,15 @@ public class MemberMenu {
 			System.out.println("3. 이메일로 검색하기");
 			System.out.println("9. 메인메뉴로");
 			System.out.println("=================================");
-			System.out.println("메뉴 번호를 입력하세요 : ");
+			System.out.print("메뉴 번호를 입력하세요 : ");
 			int num = sc.nextInt();
 			
 			switch(num) {
-			case 1 : mm.searchId();
-			case 2 : mm.searchName();
-			case 3 : mm.searchEmail();
-			case 9 : System.out.println("메인메류로 이동합니다."); return;
+			case 1 : mm.searchId(); break;
+			case 2 : mm.searchName(); break;
+			case 3 : mm.searchEmail(); break;
+			case 9 : System.out.println("메인메류로 이동합니다."); 
+			mainMenu();return;
 			}
 			
 			
@@ -71,15 +74,16 @@ public class MemberMenu {
 			System.out.println("3. 이메일 수정하기");
 			System.out.println("9. 메인메뉴로");
 			System.out.println("=================================");
-			System.out.println("메뉴 번호를 입력하세요 : ");
+			System.out.print("메뉴 번호를 입력하세요 : ");
 			int num = sc.nextInt();
 			
 			switch(num) {
 			
-			case 1 : mm.updatePwd();
-			case 2 : mm.updateName();
-			case 3 : mm.updateEmail();
-			case 9 : System.out.println("메인메뉴로 이동합니다."); return;
+			case 1 : mm.updatePwd(); break;
+			case 2 : mm.updateName(); break;
+			case 3 : mm.updateEmail(); break;
+			case 9 : System.out.println("메인메뉴로 이동합니다."); 
+					mainMenu();return;
 			}
 			
 		}while(true);
@@ -92,15 +96,16 @@ public class MemberMenu {
 			System.out.println("========== 회원 정보 삭제 ==========");
 			System.out.println("1. 회원 삭제");
 			System.out.println("2. 전체 회원 삭제");
-			System.out.println("3. 메인메뉴로");
+			System.out.println("9. 메인메뉴로");
 			System.out.println("=================================");
-			System.out.println("메뉴 번호를 입력하세요 : ");
+			System.out.print("메뉴 번호를 입력하세요 : ");
 			int num = sc.nextInt();
 			
 			switch(num) {
-			case 1 : mm.deleteOne();
-			case 2 : mm.deleteAll();
-			case 9 : System.out.println("메인 메뉴로 이동합니다."); return;
+			case 1 : mm.deleteOne(); break;
+			case 2 : mm.deleteAll(); break;
+			case 9 : System.out.println("메인 메뉴로 이동합니다."); 
+			mainMenu();return;
 			}
 			
 		}while(true);
